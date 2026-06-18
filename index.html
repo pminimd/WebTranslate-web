@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Web Translate — 选中网页文本，一键翻译。流式呈现，丝滑体验。申请内测，抢先体验。" />
+  <title>Web Translate — 选中即译，丝滑流畅</title>
+  <link rel="icon" href="assets/icon128.png" type="image/png" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>
+    window.__WT_SCRIPT_URL__ = 'https://script.google.com/macros/s/AKfycbwicGDsw58-AX0olr4BhN32M8-9idLWMix5d_um3Kou83_lI_r8wnAIt0yqXHf0GVfu6w/exec';
+  </script>
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <img src="assets/icon128.png" alt="" width="32" height="32" class="brand-icon" />
+        <span class="brand-name">Web Translate</span>
+      </a>
+      <nav class="nav" aria-label="主导航">
+        <a href="#features">功能亮点</a>
+        <a href="#demo">产品演示</a>
+        <a href="#waitlist">申请内测</a>
+      </nav>
+      <a class="btn btn-sm btn-primary header-cta" href="#waitlist">免费申请内测</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="badge">内测招募中</span>
+          <h1>选中网页文本<br /><span class="gradient-text">一键翻译</span></h1>
+          <p class="hero-lead">
+            Web Translate 浏览器扩展，在你阅读的任意网页上即时翻译选中文本。
+            流式返回、浮层展示，不打断阅读节奏。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#waitlist">申请内测资格</a>
+            <a class="btn btn-ghost btn-lg" href="#demo">观看演示</a>
+          </div>
+          <ul class="hero-stats">
+            <li><strong>&lt;200ms</strong><span>触发响应</span></li>
+            <li><strong>流式</strong><span>实时呈现</span></li>
+            <li><strong>Chrome</strong><span>即装即用</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-section" id="demo">
+      <div class="container">
+        <div class="section-head">
+          <h2>使用体验</h2>
+          <p>选中 → 翻译 → 结果浮层呈现，全程无需离开当前页面</p>
+        </div>
+
+        <div class="video-frame">
+          <div class="video-chrome">
+            <div class="video-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="video-label">产品演示</span>
+          </div>
+          <div class="video-body">
+            <!-- 有真实录屏时取消注释并替换 src：
+            <video id="demoVideo" class="demo-video" autoplay muted loop playsinline>
+              <source src="assets/demo.mp4" type="video/mp4" />
+            </video>
+            -->
+            <div id="demoFallback" class="demo-fallback active">
+              <div class="browser-mock">
+                <div class="browser-bar">
+                  <div class="browser-dots"><span></span><span></span><span></span></div>
+                  <div class="browser-url">news.example.com/article</div>
+                </div>
+                <div class="browser-content">
+                  <article class="mock-article">
+                    <h3>The Future of Reading on the Web</h3>
+                    <p>
+                      <span class="mock-word" data-i="0">Language</span>
+                      <span class="mock-word" data-i="1">should</span>
+                      <span class="mock-word" data-i="2">never</span>
+                      <span class="mock-word" data-i="3">be</span>
+                      <span class="mock-word" data-i="4">a</span>
+                      <span class="mock-word" data-i="5">barrier</span>
+                      <span class="mock-word" data-i="6">to</span>
+                      <span class="mock-word" data-i="7">knowledge.</span>
+                    </p>
+                    <p class="mock-muted">Select any text and translate instantly without leaving the page.</p>
+                  </article>
+                  <button class="mock-trigger" id="mockTrigger">翻译</button>
+                  <div class="mock-overlay" id="mockOverlay">
+                    <div class="mock-overlay-header">
+                      <span>翻译</span>
+                      <span class="mock-close">×</span>
+                    </div>
+                    <div class="mock-source">Language should never be a barrier to knowledge.</div>
+                    <div class="mock-divider"></div>
+                    <div class="mock-translation" id="mockTranslation"></div>
+                    <div class="mock-examples" id="mockExamples"></div>
+                  </div>
+                  <div class="mock-cursor" id="mockCursor"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>为什么选择 Web Translate</h2>
+          <p>为重度阅读者设计的轻量翻译工具</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-anim feature-anim--select" aria-hidden="true">
+              <div class="anim-lines">
+                <span class="anim-line"></span>
+                <span class="anim-line anim-line--highlight"></span>
+                <span class="anim-line anim-line--short"></span>
+              </div>
+              <span class="anim-pill">译</span>
+              <span class="anim-cursor"></span>
+            </div>
+            <h3>选中即译</h3>
+            <p>拖选文本或按 Alt+T，翻译结果立刻出现在选区旁，无需复制粘贴。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-anim feature-anim--stream" aria-hidden="true">
+              <div class="anim-stream-text">
+                <span class="anim-char" style="--i:0">语</span>
+                <span class="anim-char" style="--i:1">言</span>
+                <span class="anim-char" style="--i:2">不</span>
+                <span class="anim-char" style="--i:3">应</span>
+                <span class="anim-char" style="--i:4">…</span>
+              </div>
+              <span class="anim-stream-bar"></span>
+            </div>
+            <h3>流式呈现</h3>
+            <p>译文逐字流出，先看到主译文，再补充例句，等待感更低。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-anim feature-anim--overlay" aria-hidden="true">
+              <div class="anim-page">
+                <span class="anim-page-line"></span>
+                <span class="anim-page-line"></span>
+                <span class="anim-page-line anim-page-line--short"></span>
+              </div>
+              <div class="anim-float-card">
+                <span class="anim-float-line"></span>
+                <span class="anim-float-line anim-float-line--accent"></span>
+              </div>
+            </div>
+            <h3>低打扰设计</h3>
+            <p>半透明浮层 + 毛玻璃效果，融入页面，不遮挡阅读上下文。</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-anim feature-anim--shield" aria-hidden="true">
+              <svg class="anim-shield-svg" viewBox="0 0 32 36" fill="none">
+                <path class="anim-shield-body" d="M16 2L4 7v10c0 7.2 5.1 13.9 12 15 6.9-1.1 12-7.8 12-15V7L16 2z" stroke="currentColor" stroke-width="1.5"/>
+                <path class="anim-shield-check" d="M11 17l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="anim-data-dot"></span>
+              <span class="anim-data-dot anim-data-dot--2"></span>
+            </div>
+            <h3>隐私优先</h3>
+            <p>仅发送选中文本，不上报完整页面 URL，数据安全可控。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="waitlist" id="waitlist">
+      <div class="container waitlist-inner">
+        <div class="waitlist-copy">
+          <h2>申请内测体验</h2>
+          <p>
+            留下邮箱，我们将在内测开放时第一时间通知你。
+            首批用户将获得完整功能体验与专属反馈通道。
+          </p>
+          <ul class="waitlist-perks">
+            <li>优先获得 Chrome 扩展安装包</li>
+            <li>流式翻译完整功能体验</li>
+            <li>产品迭代意见直达团队</li>
+          </ul>
+        </div>
+        <form class="waitlist-form" id="waitlistForm" novalidate>
+          <label for="email" class="sr-only">邮箱地址</label>
+          <div class="input-group">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+            />
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              申请内测
+            </button>
+          </div>
+          <p class="form-hint">我们尊重你的隐私，不会向第三方分享邮箱。</p>
+          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/icon128.png" alt="" width="24" height="24" />
+        <span>Web Translate</span>
+      </div>
+      <p class="footer-copy">&copy; 2026 Web Translate. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

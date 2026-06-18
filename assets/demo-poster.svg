@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect x="120" y="80" width="1040" height="560" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="120" y="80" width="1040" height="48" rx="16" fill="#f1f5f9"/>
+  <rect x="120" y="112" width="1040" height="16" fill="#f1f5f9"/>
+  <circle cx="152" cy="104" r="8" fill="#fca5a5"/>
+  <circle cx="176" cy="104" r="8" fill="#fcd34d"/>
+  <circle cx="200" cy="104" r="8" fill="#86efac"/>
+  <rect x="360" y="92" width="560" height="24" rx="12" fill="#fff"/>
+  <text x="640" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="28" fill="#64748b">Web Translate : }-&</text>
+</svg>
