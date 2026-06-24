@@ -1,0 +1,12 @@
+{
+  "name": "web-translate-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "serve . -l 5007",
+    "start": "serve . -l ${PORT:-5007}"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
