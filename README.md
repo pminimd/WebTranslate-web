@@ -43,6 +43,17 @@ nohup ./run.sh > web.log 2>&1 &
 
 `run.sh` 适用于快速上线或暂无 Nginx 的场景。
 
+### Nginx 反向代理（HTTP）
+
+`run.sh` 监听 `127.0.0.1:5007` 后，用 Nginx 对外暴露 80 端口：
+
+```bash
+sudo cp nginx/la-yee.com.conf /etc/nginx/conf.d/la-yee.com.conf
+sudo nginx -t && sudo systemctl reload nginx
+```
+
+将 `la-yee.com`、`www.la-yee.com` 解析到服务器公网 IP 即可。
+
 ## 项目结构
 
 ```
