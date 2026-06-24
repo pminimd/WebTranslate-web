@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "serve . -l 5007",
-    "start": "serve . -l ${PORT:-5007}"
+    "start": "serve . -l tcp://0.0.0.0:${PORT:-5007}"
   },
-  "devDependencies": {
+  "dependencies": {
     "serve": "^14.2.4"
   }
 }
