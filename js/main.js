@@ -167,6 +167,9 @@
     loop();
   }
 
+  const EXTENSION_URL =
+    window.__WT_EXTENSION_URL__ || 'https://github.com/pminimd/WebTranslate-extension';
+
   // --- Waitlist form ---
   function getSource() {
     const params = new URLSearchParams(window.location.search);
@@ -225,13 +228,10 @@
           message.textContent = '提交成功，正在前往插件安装页…';
           message.className = 'form-message success';
           form.reset();
-          const extensionUrl = window.__WT_EXTENSION_URL__;
-          if (extensionUrl) {
-            window.setTimeout(() => {
-              window.location.href = extensionUrl;
-            }, 800);
-            return;
-          }
+          window.setTimeout(() => {
+            window.location.assign(EXTENSION_URL);
+          }, 800);
+          return;
         } else {
           message.textContent = data.message || '提交失败，请稍后重试';
           message.className = 'form-message error';
