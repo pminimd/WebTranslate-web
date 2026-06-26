@@ -222,9 +222,16 @@
         const data = await submitEmail(email);
 
         if (data.ok !== false) {
-          message.textContent = data.message || '申请成功！我们会在内测开放时邮件通知你。';
+          message.textContent = '提交成功，正在前往插件安装页…';
           message.className = 'form-message success';
           form.reset();
+          const extensionUrl = window.__WT_EXTENSION_URL__;
+          if (extensionUrl) {
+            window.setTimeout(() => {
+              window.location.href = extensionUrl;
+            }, 800);
+            return;
+          }
         } else {
           message.textContent = data.message || '提交失败，请稍后重试';
           message.className = 'form-message error';
