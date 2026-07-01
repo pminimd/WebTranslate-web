@@ -3,15 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Web Translate — 选中网页文本，一键翻译。流式呈现，丝滑体验。申请内测，抢先体验。" />
+  <meta name="description" content="Web Translate — 选中网页文本，一键翻译。流式呈现，丝滑体验。前往 GitHub 安装扩展。" />
   <title>Web Translate — 选中即译，丝滑流畅</title>
   <link rel="icon" href="assets/icon128.png" type="image/png" />
   <link rel="stylesheet" href="css/styles.css" />
-  <script>
-    window.__WT_API_BASE__ = 'https://api.la-yee.com';
-    window.__WT_SCRIPT_URL__ = 'https://script.google.com/macros/s/AKfycbwicGDsw58-AX0olr4BhN32M8-9idLWMix5d_um3Kou83_lI_r8wnAIt0yqXHf0GVfu6w/exec';
-    window.__WT_EXTENSION_URL__ = 'https://github.com/pminimd/WebTranslate-extension';
-  </script>
 </head>
 <body>
   <header class="site-header" id="top">
@@ -23,9 +18,9 @@
       <nav class="nav" aria-label="主导航">
         <a href="#features">功能亮点</a>
         <a href="#demo">产品演示</a>
-        <a href="#waitlist">申请内测</a>
+        <a href="#install">安装扩展</a>
       </nav>
-      <a class="btn btn-sm btn-primary header-cta" href="#waitlist">免费申请内测</a>
+      <a class="btn btn-sm btn-primary header-cta" href="https://github.com/pminimd/WebTranslate-extension" target="_blank" rel="noopener noreferrer">安装扩展</a>
     </div>
   </header>
 
@@ -33,14 +28,14 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <span class="badge">Beta Access · Limited Release</span>
+          <span class="badge">Chrome · Edge · 开源免费</span>
           <h1>选中网页文本<br /><span class="gradient-text">一键翻译</span></h1>
           <p class="hero-lead">
             Web Translate 浏览器扩展，在你阅读的任意网页上即时翻译选中文本。
             流式返回、浮层展示，不打断阅读节奏。
           </p>
           <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="#waitlist">申请内测资格</a>
+            <a class="btn btn-primary btn-lg" href="https://github.com/pminimd/WebTranslate-extension" target="_blank" rel="noopener noreferrer">前往 GitHub 安装</a>
             <a class="btn btn-ghost btn-lg" href="#demo">观看演示</a>
           </div>
           <ul class="hero-stats">
@@ -178,38 +173,31 @@
       </div>
     </section>
 
-    <section class="waitlist" id="waitlist">
-      <div class="container waitlist-inner">
-        <div class="waitlist-copy">
-          <h2>申请内测体验</h2>
+    <section class="install" id="install">
+      <div class="container install-inner">
+        <div class="install-copy">
+          <h2>立即安装</h2>
           <p>
-            留下邮箱，我们将在内测开放时第一时间通知你。
-            首批用户将获得完整功能体验与专属反馈通道。
+            从 GitHub 获取扩展安装包，支持 Chrome 与 Microsoft Edge，即装即用。
           </p>
-          <ul class="waitlist-perks">
+          <ul class="install-perks">
             <li>支持 Chrome 与 Microsoft Edge，即装即用</li>
             <li>流式翻译完整功能体验</li>
-            <li>产品迭代意见直达团队</li>
+            <li>开源可审计，欢迎反馈与贡献</li>
           </ul>
         </div>
-        <form class="waitlist-form" id="waitlistForm" novalidate>
-          <label for="email" class="sr-only">邮箱地址</label>
-          <div class="input-group">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="your@email.com"
-              autocomplete="email"
-              required
-            />
-            <button type="submit" class="btn btn-primary" id="submitBtn">
-              申请内测
-            </button>
-          </div>
-          <p class="form-hint">我们尊重你的隐私，不会向第三方分享邮箱。</p>
-          <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
-        </form>
+        <div class="install-card">
+          <p class="install-card-lead">点击下方按钮，在新窗口打开 GitHub 仓库页面</p>
+          <a
+            class="btn btn-primary btn-lg install-btn"
+            href="https://github.com/pminimd/WebTranslate-extension"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            前往 GitHub 安装
+          </a>
+          <p class="install-hint">安装说明与最新版本均在 GitHub 仓库中</p>
+        </div>
       </div>
     </section>
   </main>
@@ -224,6 +212,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>
